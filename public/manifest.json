@@ -1,0 +1,48 @@
+{
+    "name": "ADAM44 Unity Manager Pro",
+    "short_name": "ADAM44",
+    "description": "ናይ ፋይናንስ ምሕደራ ስርዓት — Financial Management System",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#070e1c",
+    "theme_color": "#10b981",
+    "orientation": "any",
+    "lang": "ti",
+    "categories": ["finance", "business"],
+    "icons": [
+        {
+            "src": "/icons/icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "/icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [],
+    "shortcuts": [
+        {
+            "name": "ዳሽቦርድ",
+            "short_name": "Dashboard",
+            "description": "Open dashboard",
+            "url": "/dashboard"
+        },
+        {
+            "name": "ክፍሊታት",
+            "short_name": "Payments",
+            "description": "Manage payments",
+            "url": "/payments"
+        }
+    ]
+}

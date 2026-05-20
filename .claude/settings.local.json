@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir D:\\\\FinanceProject /b)",
+      "PowerShell(Get-ChildItem \"D:\\\\FinanceProject\\\\resources\" -Recurse -Force | Where-Object { -not $_.PSIsContainer } | Select-Object FullName | Sort-Object FullName)",
+      "Bash(php artisan *)",
+      "Bash(composer show *)",
+      "Bash(npm run *)",
+      "Bash(Get-Content *)",
+      "Bash(php -r \"echo PHP_EOL;\")",
+      "Bash(cd /d \"D:\\\\FinanceProject\")",
+      "Bash(New-Item -ItemType Directory -Force \"D:\\\\FinanceProject\\\\public\\\\icons\")",
+      "Bash(Out-Null)",
+      "Bash(Write-Output \"done\")",
+      "PowerShell(New-Item *)",
+      "Bash(mysql *)",
+      "PowerShell(mysql *)",
+      "PowerShell(Get-Command *)",
+      "PowerShell(php artisan tinker --execute=\"try { DB::connection\\(\\)->getPdo\\(\\); echo 'CONNECTED: ' . DB::connection\\(\\)->getDatabaseName\\(\\); } catch\\(\\\\Exception \\\\$e\\) { echo 'ERROR: ' . \\\\$e->getMessage\\(\\); }\" 2>&1)",
+      "PowerShell(php -r \"try { \\\\$pdo = new PDO\\('mysql:host=127.0.0.1;port=3306;dbname=finance_db', 'adam_user', 'adam07407182@Afar'\\); echo 'CONNECTED: ' . \\\\$pdo->query\\('SELECT DATABASE\\(\\)'\\)->fetchColumn\\(\\); } catch\\(Exception \\\\$e\\) { echo 'ERROR: ' . \\\\$e->getMessage\\(\\); }\" 2>&1)",
+      "PowerShell(php D:\\\\FinanceProject\\\\test_db_root.php 2>&1)",
+      "PowerShell(npm run *)",
+      "PowerShell(php D:\\\\FinanceProject\\\\backfill_transactions.php 2>&1)",
+      "PowerShell(php artisan optimize:clear 2>&1)",
+      "PowerShell(Get-ChildItem \"D:\\\\FinanceProject\\\\app\\\\Http\\\\Middleware\" -File | ForEach-Object { $_.Name })",
+      "PowerShell(Select-String -Path \"D:\\\\FinanceProject\\\\.env\" -Pattern \"APP_ENV|APP_DEBUG|APP_URL|DB_PASSWORD|SESSION_DRIVER|SESSION_DOMAIN|SESSION_SECURE\" | ForEach-Object { $_.Line })"
+    ]
+  }
+}
