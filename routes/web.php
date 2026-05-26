@@ -5,6 +5,7 @@ use App\Http\Controllers\AiInsightController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ExportController;
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\OtherIncomeController;
@@ -32,6 +33,7 @@ Route::middleware('auth')->get('/pending-approval', fn() => view('auth.pending-a
 // Auth + approved routes
 Route::middleware(['auth', 'verified', 'approved'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard/export', [ExportController::class, 'downloadFinancials'])->name('dashboard.export');
 
     // Finance resources
     Route::resource('transactions', TransactionController::class)->except(['show']);

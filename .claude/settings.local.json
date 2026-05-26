@@ -23,7 +23,9 @@
       "PowerShell(php D:\\\\FinanceProject\\\\backfill_transactions.php 2>&1)",
       "PowerShell(php artisan optimize:clear 2>&1)",
       "PowerShell(Get-ChildItem \"D:\\\\FinanceProject\\\\app\\\\Http\\\\Middleware\" -File | ForEach-Object { $_.Name })",
-      "PowerShell(Select-String -Path \"D:\\\\FinanceProject\\\\.env\" -Pattern \"APP_ENV|APP_DEBUG|APP_URL|DB_PASSWORD|SESSION_DRIVER|SESSION_DOMAIN|SESSION_SECURE\" | ForEach-Object { $_.Line })"
+      "PowerShell(Select-String -Path \"D:\\\\FinanceProject\\\\.env\" -Pattern \"APP_ENV|APP_DEBUG|APP_URL|DB_PASSWORD|SESSION_DRIVER|SESSION_DOMAIN|SESSION_SECURE\" | ForEach-Object { $_.Line })",
+      "Bash(php -r \"require 'vendor/autoload.php'; require 'bootstrap/app.php';\")",
+      "Bash(composer require *)"
     ]
   }
 }

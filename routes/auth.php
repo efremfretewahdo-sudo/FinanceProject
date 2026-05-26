@@ -5,13 +5,23 @@ use App\Http\Controllers\Auth\ConfirmablePasswordController;
 use App\Http\Controllers\Auth\EmailVerificationNotificationController;
 use App\Http\Controllers\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Auth\NewPasswordController;
+use App\Http\Controllers\Auth\OtpWebController;
 use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index']);
+});
 Route::middleware('guest')->group(function () {
+    // ── OTP verification ─────────────────────────────────────────────────────
+    // Accessible as: /otp/verify?email=user@example.com&redirect=/dashboard
+    // Alpine.js on the page calls /api/v1/auth/otp/send + /api/v1/auth/otp/verify.
+    Route::get('otp/verify', [OtpWebController::class, 'show'])->name('otp.verify');
+
     Route::get('register', [RegisteredUserController::class, 'create'])
         ->name('register');
 

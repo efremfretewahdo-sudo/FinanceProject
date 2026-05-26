@@ -15,13 +15,22 @@
                 </h1>
                 <p class="text-sm text-slate-400 mt-1">{{ now()->format('l, F j, Y') }}</p>
             </div>
-            <a href="{{ route('transactions.index') }}"
-               class="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-xl transition-all self-start sm:self-auto border"
-               style="border-color:rgba(16,185,129,.4); color:#10b981; background:rgba(16,185,129,.08);"
-               onmouseover="this.style.background='rgba(16,185,129,.15)'" onmouseout="this.style.background='rgba(16,185,129,.08)'">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                View Report
-            </a>
+            <div class="flex flex-wrap items-center gap-3 self-start sm:self-auto">
+                <a href="{{ route('transactions.index') }}"
+                   class="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-xl transition-all border"
+                   style="border-color:rgba(16,185,129,.4); color:#10b981; background:rgba(16,185,129,.08);"
+                   onmouseover="this.style.background='rgba(16,185,129,.15)'" onmouseout="this.style.background='rgba(16,185,129,.08)'">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    View Report
+                </a>
+                <a href="{{ route('dashboard.export') }}"
+                   class="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-xl transition-all border"
+                   style="border-color:rgba(99,102,241,.4); color:#6366f1; background:rgba(99,102,241,.08);"
+                   onmouseover="this.style.background='rgba(99,102,241,.18)'" onmouseout="this.style.background='rgba(99,102,241,.08)'">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+                    Export to Excel
+                </a>
+            </div>
         </div>
 
         {{-- ═══ 5 STAT CARDS ═══ --}}
