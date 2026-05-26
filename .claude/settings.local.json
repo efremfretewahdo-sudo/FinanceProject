@@ -25,7 +25,14 @@
       "PowerShell(Get-ChildItem \"D:\\\\FinanceProject\\\\app\\\\Http\\\\Middleware\" -File | ForEach-Object { $_.Name })",
       "PowerShell(Select-String -Path \"D:\\\\FinanceProject\\\\.env\" -Pattern \"APP_ENV|APP_DEBUG|APP_URL|DB_PASSWORD|SESSION_DRIVER|SESSION_DOMAIN|SESSION_SECURE\" | ForEach-Object { $_.Line })",
       "Bash(php -r \"require 'vendor/autoload.php'; require 'bootstrap/app.php';\")",
-      "Bash(composer require *)"
+      "Bash(composer require *)",
+      "Bash(Get-ChildItem -Path \"d:\\\\FinanceProject\" -Force)",
+      "Bash(Select-Object -First 20)",
+      "Bash(Get-ChildItem -Path \"d:\\\\FinanceProject\\\\finance-mobile-app\" -Force)",
+      "Bash(git rm *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'chore: rebuild production assets \\(new CSS hash after Excel rollback\\) *)",
+      "Bash(git push *)"
     ]
   }
 }
